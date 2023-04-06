@@ -14,8 +14,8 @@ function draw() {
  background(0);
  noStroke();
  fill(255);
- circle(circleX, 150, 50);
- circleX++ ;
+ circle(circleX, windowWidth/2, windwoHieght/2);
+ 
 
 
 }
