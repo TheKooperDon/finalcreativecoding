@@ -2,6 +2,7 @@ let circleX = 100;
 var x = 0;
 var xSpeed = 3;
 var y = 0;
+var ySpeed = ;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -19,15 +20,18 @@ function draw() {
  stroke(255);
  strokeWeight(4);
  noFill();
- ellipse(x, 200, 100, 100);
+ ellipse(x, y, 100, 100);
 
 
- if (x > width || x < 0) {
-  xSpeed = xSpeed * -3
+ if (x > width || x < 0){
+  xSpeed = xSpeed * -1
  } 
  x = x + xSpeed;
- 
-//x = x + speed;
+ if (y > height || y < 0){
+  ySpeed = ySpeed * -1
+ }
+ y = y = ySpeed;
+
 
 
 }
