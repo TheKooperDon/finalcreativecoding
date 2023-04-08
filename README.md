@@ -14,3 +14,7 @@ It becomes trippy looking. Once the mouse touches it.
 I just think that is my goal since none of my prior projects never did anything oyu just looked at it. 
 
 I would like the piece to look like an optical illsuion. 
+
+I love learning that the if statements will just move on if the first one is true. Hence why it needs to be better if you started with a higher number. 
+
+Learned && (ands) and || (ors) useful to get a range of numbers going in the if else statement 
