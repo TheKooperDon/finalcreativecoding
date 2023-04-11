@@ -8,37 +8,21 @@ function setup() {
 
 
 
-
-function draw() {
-  if (on) {
-    background(0, 255, 0)
-  } else {
-    background(0)
-  }
   
- 
- //background(0)
+ function draw(){
+ background(0)
  
  fill(255,255,0);
  noFill()
  strokeWeight(4);
  stroke(255, 204, 0);
 
-/*
-if (mouseIsPressed && mouseX > 1000 && mouseX < 1100 ){
-  fill(255,0,200);
-}else if (mouseIsPressed && mouseX > 200 && mouseX < 400 ){
-  fill(0,0,200);
-}else{
-  noFill();
-}
 
-*/
 
 
 //fill mouse press and color change for fill
 
-/*
+
  if (mouseIsPressed && mouseX > 1000 && mouseX < 1100 ) {
   fill(3, 111, 252)
  }else if (mouseIsPressed && mouseX > 900 && mouseX < 999 ){
@@ -59,7 +43,7 @@ if (mouseIsPressed && mouseX > 1000 && mouseX < 1100 ){
   fill(0)
  } 
 
-*/ 
+ 
 /*
 if (mouseX > 300 && mouseX < 700 && mouseY > 300 && mouseY < 700){
   fill(255,0,200);
@@ -91,11 +75,12 @@ if (mouseX > 300 && mouseX < 700 && mouseY > 300 && mouseY < 700){
  ellipse(windowWidth/2, windowHeight/2, 200, 200);
 
 
-
-
 }
+
+/* the true and false switcher. Hence the !on
 function mousePressed() {
   if (mouseX > 100){
     on = !on;
 }
-}
+
+*/
