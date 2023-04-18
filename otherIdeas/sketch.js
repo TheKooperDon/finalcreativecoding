@@ -10,7 +10,7 @@ function draw() {
   strokeWeight(4)
   stroke(255);
 
-  for (var x = 0; x <= width; x = x + 50 ){
+  for (var x = 0; x <= width; x += 50 ){
     
     fill(255,0,200)
     ellipse(x, 200, 25, 25);
