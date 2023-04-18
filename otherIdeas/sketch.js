@@ -1,3 +1,4 @@
+
 var x = 0;
 
 function setup(){
@@ -15,7 +16,7 @@ function draw() {
     fill(255,0,200)
     ellipse(x, 200, 25, 25);
   }
-
+}
 
 
   /*
@@ -47,4 +48,3 @@ var x = 0;
   //ellipse(300, 200, 25, 25);
 
 */
-}
