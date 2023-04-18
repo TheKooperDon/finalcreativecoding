@@ -1,37 +1,23 @@
-let circleX = 100;
 var x = 0;
-var xSpeed = 3;
-var y = 0;
-var ySpeed = ;
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);
+function setup(){
+  createCanvas(600, 600)
 
-  
-
-}
-function mousePressed() {
- circleX = 0;
 }
 
 function draw() {
- 
- background(0)
- stroke(255);
- strokeWeight(4);
- noFill();
- ellipse(x, y, 100, 100);
+  background(0)
+  strokeWeight(4)
+  stroke(255);
 
 
- if (x > width || x < 0){
-  xSpeed = xSpeed * -1
- } 
- x = x + xSpeed;
- if (y > height || y < 0){
-  ySpeed = ySpeed * -1
- }
- y = y = ySpeed;
-
+  ellipse(0, 200, 25, 25);
+  ellipse(0, 200, 25, 25);
+  ellipse(0, 200, 25, 25);
+  ellipse(0, 200, 25, 25);
+  ellipse(0, 200, 25, 25);
+  ellipse(0, 200, 25, 25);
+  ellipse(0, 200, 25, 25);
 
 
 }
