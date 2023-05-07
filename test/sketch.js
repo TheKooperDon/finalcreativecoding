@@ -48,8 +48,8 @@ bubble7.show();
 
 class Bubble{
   constructor() {
-    this.x=100;
-    this.y=100;
+    this.x= random(50, 100);
+    this.y=random(50, 100);
   }
   move() {
     this.x = this.y + random(-10, 10);
