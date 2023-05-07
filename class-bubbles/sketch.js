@@ -10,13 +10,13 @@ let bubble7;
 function setup() {
   createCanvas(800, 500);
   
-  bubble1 = new Bubble();
-  bubble2 = new Bubble();
-  bubble3 = new Bubble();
-  bubble4 = new Bubble();
-  bubble5 = new Bubble();
-  bubble6 = new Bubble();
-  bubble7 = new Bubble();
+  bubble1 = new Bubble(200, 200, 40, random(255), random(255), random(255));
+  bubble2 = new Bubble(200, 200, 20, random(255), random(255), random(255));
+  bubble3 = new Bubble(200, 400, 40, random(255), random(255), random(255));
+  bubble4 = new Bubble(100, 200, 20, random(255), 100, random(255));
+  bubble5 = new Bubble(400, 200, 40, random(255), random(255), random(255));
+  bubble6 = new Bubble(300, 200, 20, random(255), random(255), random(255));
+  bubble7 = new Bubble(200, 200, 40, random(255), random(255), random(255));
 }
 
 
@@ -47,18 +47,22 @@ bubble7.show();
 }
 
 class Bubble{
-  constructor() {
-    this.x= random(50, 100);
-    this.y=random(50, 100);
+  constructor(x, y, r, color1, color2, color3) {
+    this.x = x;
+    this.y = y;
+    this.r = r;
+    this.color1 = color1;
+    this.color2 = color2;
+    this.color3 = color3;
   }
   move() {
     this.x = this.y + random(-10, 10);
     this.y = this.y + random(-10, 10);
   }
   show() {
-    stroke(255);
+    stroke(this.color1, this.color2, this.color3);
     strokeWeight(4);
     noFill();
-    ellipse(this.x, this.y, 24, 24)
+    ellipse(this.x, this.y, this.r*2)
   }
 }
