@@ -44,6 +44,7 @@ bubble6.show();
 
 bubble7.move();
 bubble7.show();
+
 }
 
 class Bubble{
