@@ -1,38 +1,25 @@
-let bugs = []; // array of Jitter objects
+let variationNumber = 1; // Change this number to generate a new variation
+let variationSeed; // This will be used to set the random seed for each variation
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  // Create objects
-  for (let i = 0; i < 100; i++) {
-    bugs.push(new Jitter());
-  }
+  createCanvas(600, 600);
+  variationSeed = random(10000); // Generate a random seed for this variation
+  randomSeed(variationSeed); // Set the random seed for this variation
 }
 
 function draw() {
-  background(50, 89, 100);
-  for (let i = 0; i < bugs.length; i++) {
-    bugs[i].move();
-    bugs[i].display();
-  }
-}
+  background(220);
 
-// Jitter class
-class Jitter {
-  constructor() {
-    this.x = random(width);
-    this.y = random(height);
-    this.diameter = random(40, 100);
-    this.speed = 1;
-  }
+  // Your generative art code goes here!
+  // Use the randomSeed() function to ensure the same result each time
+  // when generating the same variation number.
 
-  move() {
-    this.x += random(-this.speed, this.speed);
-    this.y += random(-this.speed, this.speed);
-  }
+  // For example:
+  fill(random(255), random(255), random(255));
+  ellipse(random(width), random(height), random(50, 100));
 
-  display() {
-    ellipse(this.x, this.y, this.diameter, this.diameter);
-    fill(random(0,100), random(0,155), random(200,255))
-
+  // Save the canvas as an image and add it to an NFT
+  if (frameCount == 1) {
+    saveCanvas(`variation${variationNumber}.jpg`);
   }
 }
