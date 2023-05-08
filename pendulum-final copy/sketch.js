@@ -48,7 +48,7 @@ function setup() {
 }
 
 function draw() {
-  
+  background(0)
 
   for (let i = 0; i < pendulums.length; i++) {
     pendulums[i].update();
@@ -79,7 +79,9 @@ function draw() {
       this.angleA = 0;
       this.bob = createVector();
       this.gravity = .5;
-
+      //this is me creating another one at the end of it. 
+      //null cuz its nothing at firsst but i need it. 
+      //i am * it to make it smaller then the OG ones. 
       this.childPendulum = null;
       if (len > 75) {
         this.childPendulum = new Pendulum(color, len * 0.75, size * 0.75);
@@ -95,7 +97,8 @@ function draw() {
       this.bob.x = this.len * sin(this.angle) + this.origin.x;
       this.bob.y = this.len * cos(this.angle) + this.origin.y;
 
-       // update child pendulum if it exists
+       // check child pendulum if it exists
+       //if so it sets the "origin" of the child pendulum to be the same as the position of the "bob" of the current pendulum
       if (this.childPendulum) {
         this.childPendulum.origin = this.bob.copy();
         this.childPendulum.update();
@@ -108,6 +111,7 @@ function draw() {
       fill(this.color);
       ellipse(this.bob.x, this.bob.y, this.size*2);
 
+      //now this just does the same thing but another string of stuff. 
       if (this.childPendulum) {
         this.childPendulum.display();
       }
