@@ -48,12 +48,13 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  
 
   for (let i = 0; i < pendulums.length; i++) {
     pendulums[i].update();
     pendulums[i].display();
   }
+ 
 }
 //This will update and display all the pendulums in the array, regardless of how many there are.
 /*p1.update();
@@ -64,7 +65,18 @@ function draw() {
 
   p3.update();
   p3.display();*/
+  function mousePressed() {
+   
+   
+   for (let i = 0; i < pendulums.length; i++) {
+    pendulums[i].len = random(50, 600);
+    pendulums[i].color = color(random(255), random(255), random(255), 50);
 
+  }
+ 
+ 
+ 
+  }
 
 
 
@@ -124,5 +136,6 @@ function draw() {
         this.childPendulum.display();
       }
     }
+    
   }
   
