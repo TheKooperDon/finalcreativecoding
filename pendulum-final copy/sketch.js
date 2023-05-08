@@ -1,7 +1,7 @@
 let pendulums = [];
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(800, 2000);
   
   let p1 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255), 50), 100, 10);
   let p2 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255), 50), 125, 10);
@@ -48,7 +48,7 @@ function setup() {
 }
 
 function draw() {
-  background(0)
+  background(0);
 
   for (let i = 0; i < pendulums.length; i++) {
     pendulums[i].update();
@@ -82,6 +82,7 @@ function draw() {
       //this is me creating another one at the end of it. 
       //null cuz its nothing at firsst but i need it. 
       //i am * it to make it smaller then the OG ones. 
+      //it will keep making another one on top of it till it hits the baby one. Hence knows when to stop.
       this.childPendulum = null;
       if (len > 75) {
         this.childPendulum = new Pendulum(color, len * 0.75, size * 0.75);
@@ -97,9 +98,16 @@ function draw() {
       this.bob.x = this.len * sin(this.angle) + this.origin.x;
       this.bob.y = this.len * cos(this.angle) + this.origin.y;
 
-       // check child pendulum if it exists
-       //if so it sets the "origin" of the child pendulum to be the same as the position of the "bob" of the current pendulum
-      if (this.childPendulum) {
+       /* check child pendulum if it exists
+       /if so it sets the "origin" of the child pendulum to be the same as the position of the "bob" of the current pendulum
+       /this.bobcopy line tells it that the orgin of this one goes where that bob is. 
+       /copy() is a function in p5.js that creates a new vector object with the same values as the original vector.
+        The copy() will have the same x and y
+        mainly everything about the copy makes sure it goes with it. 
+      
+      
+       */
+       if (this.childPendulum) {
         this.childPendulum.origin = this.bob.copy();
         this.childPendulum.update();
     }
