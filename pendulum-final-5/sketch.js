@@ -3,15 +3,15 @@ let pendulums = [];
 function setup() {
   createCanvas(800, 2000);
   
-  let p1 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 200, 10);
-  let p2 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 250, 10);
-  let p3 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 300, 10);
-  let p4 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 350, 10);
-  let p5 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 400, 10);
-  let p6 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 500, 10);
-  let p7 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 550, 10);
-  let p8 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 650, 10);
-  let p9 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 700, 10);
+  let p1 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 200, 5);
+  let p2 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 250, 5);
+  let p3 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 300, 5);
+  let p4 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 350, 20);
+  let p5 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 400, 5);
+  let p6 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 500, 1);
+  let p7 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 550, 1);
+  let p8 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 650, 1);
+  let p9 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 700, 1);
   let p10 = new Pendulum(color(random(100, 255), random(0, 200), random(150, 255)), 750, 10);
   
 
@@ -52,7 +52,7 @@ function draw() {
    
    for (let i = 0; i < pendulums.length; i++) {
     pendulums[i].len = random(50, 600);
-    pendulums[i].color = color(random(255), random(255), random(255), 50);
+    pendulums[i].color = color(random(255), random(255), random(255));
 
   }
  
